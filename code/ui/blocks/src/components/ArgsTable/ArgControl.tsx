@@ -82,9 +82,12 @@ export const ArgControl: FC<ArgControlProps> = ({ row, arg, updateArgs }) => {
         .map((controlType: string) => {
           const UninonControl = Controls[controlType] || NoControl;
           const argValueType = typeof boxedValue.value;
-          const controlValue = argValueType === tsTypes.shift() ? boxedValue.value : undefined;
+          const controlValue = [tsTypes.shift(), controlType].includes(argValueType)
+            ? boxedValue.value
+            : undefined;
 
           const controlKey = `${controlType}-${key}`;
+
           return (
             <UninonControl
               {...props}

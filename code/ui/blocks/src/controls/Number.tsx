@@ -65,7 +65,7 @@ export const NumberControl: FC<NumberProps> = ({
       setInputValue(value);
     }
   }, [value]);
-  console.log('  NumberControl  ', { value, inputValue, forceVisible });
+
   if (value === undefined) {
     return (
       <Form.Button id={getControlSetterButtonId(name)} onClick={onForceVisible}>
