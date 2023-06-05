@@ -86,7 +86,7 @@ export const ArgControl: FC<ArgControlProps> = ({ row, arg, updateArgs }) => {
             ? boxedValue.value
             : undefined;
 
-          const controlKey = `${controlType}-${key}`;
+          const controlKey = controls.length > 1 ? `${controlType}-${key}` : key;
 
           return (
             <UninonControl
