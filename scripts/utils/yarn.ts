@@ -27,6 +27,7 @@ export const addPackageResolutions = async ({ cwd, dryRun }: YarnOptions) => {
     playwright: '^1.35.0',
     'playwright-core': '^1.35.0',
     '@playwright/test': '^1.35.0',
+    '@storybook/testing-library': '0.1.1--canary.958fe40.0',
   };
   await writeJSON(packageJsonPath, packageJson, { spaces: 2 });
 };
