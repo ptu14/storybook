@@ -116,8 +116,6 @@ const run = async ({ cwd, flags }: { cwd: string; flags: string[] }) => {
     tasks.push(
       build({
         silent: true,
-        treeshake: true,
-        splitting: true,
         entry: allEntries,
         watch,
         outDir,
